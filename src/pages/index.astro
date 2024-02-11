@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Skatemap">
+  <main>
+    <img src="/logo.svg" alt="Skatemap logo" class="main-logo" />
+    <section class="store-links">
+      <a href="https://testflight.apple.com/join/9guF8i0g">
+        <img src="/appstore.svg" alt="Download on the App Store" />
+      </a>
+      <a href="https://getupdraft.com/getapp/eb7c8afe96d64bd099934318910d9de5">
+        <img src="/updraft.svg" alt="Download on the Updraft" />
+      </a>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    padding-top: 10rem;
+    width: 100%;
+    /* max-width: calc(100% - 2rem); */
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  main .main-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    /* height: 400px; */
+  }
+
+  .store-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 5rem;
+  }
+</style>
