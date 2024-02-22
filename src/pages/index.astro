@@ -13,16 +13,18 @@ import Layout from "../layouts/Layout.astro";
         <img src="/updraft.svg" alt="Download on the Updraft" />
       </a>
     </section>
+    <footer class="footer">
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms-and-conditions">Terms & Conditions</a>
+    </footer>
   </main>
 </Layout>
 
 <style>
   main {
     margin: auto;
-    padding: 1rem;
     padding-top: 10rem;
     width: 100%;
-    /* max-width: calc(100% - 2rem); */
     color: white;
     font-size: 20px;
     line-height: 1.6;
@@ -40,5 +42,21 @@ import Layout from "../layouts/Layout.astro";
     justify-content: center;
     gap: 1rem;
     margin-top: 5rem;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer a {
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0 10px;
   }
 </style>
