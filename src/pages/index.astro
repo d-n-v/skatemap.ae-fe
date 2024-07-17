@@ -6,11 +6,11 @@ import Layout from "../layouts/Layout.astro";
   <main>
     <img src="/logo.svg" alt="Skatemap logo" class="main-logo" />
     <section class="store-links">
-      <a href="https://testflight.apple.com/join/9guF8i0g">
+      <a href="https://apps.apple.com/ch/app/skatemap-ae/id1669568287">
         <img src="/appstore.svg" alt="Download on the App Store" />
       </a>
-      <a href="https://getupdraft.com/getapp/eb7c8afe96d64bd099934318910d9de5">
-        <img src="/updraft.svg" alt="Download on the Updraft" />
+      <a href="https://play.google.com/store/apps/details?id=ae.skatemap.app">
+        <img src="/google_play.svg" alt="Download on the Google Play" />
       </a>
     </section>
     <footer class="footer">
@@ -23,11 +23,16 @@ import Layout from "../layouts/Layout.astro";
 <style>
   main {
     margin: auto;
-    padding-top: 10rem;
+    padding: 8rem 0 5rem;
     width: 100%;
     color: white;
     font-size: 20px;
     line-height: 1.6;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: calc(100vh - 13rem);
+    justify-content: space-between;
   }
 
   main .main-logo {
@@ -40,6 +45,7 @@ import Layout from "../layouts/Layout.astro";
   .store-links {
     display: flex;
     justify-content: center;
+    justify-self: flex-end;
     gap: 1rem;
     margin-top: 5rem;
   }
@@ -55,7 +61,8 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .footer a {
-    font-size: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
     text-decoration: none;
     margin: 0 10px;
   }
