@@ -4,7 +4,16 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Skatemap">
   <main>
-    <img src="/logo.svg" alt="Skatemap logo" class="main-logo" />
+    <img
+      src="/logo.svg"
+      alt="Skatemap logo"
+      class="main-logo main-logo-desktop"
+    />
+    <img
+      src="/logo_green.svg"
+      alt="Skatemap logo"
+      class="main-logo main-logo-mobile"
+    />
     <section class="store-links">
       <a href="https://apps.apple.com/ch/app/skatemap-ae/id1669568287">
         <img src="/appstore.svg" alt="Download on the App Store" />
@@ -35,11 +44,35 @@ import Layout from "../layouts/Layout.astro";
     justify-content: space-between;
   }
 
-  main .main-logo {
+  .main-logo {
     display: block;
     margin: 0 auto;
     max-width: 50%;
     /* height: 400px; */
+  }
+
+  .main-logo-desktop {
+    display: none;
+  }
+
+  .main-logo-mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .main-logo-mobile {
+      display: block;
+    }
+
+    .main-logo-desktop {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .main-logo-desktop {
+      display: block !important;
+    }
   }
 
   .store-links {
